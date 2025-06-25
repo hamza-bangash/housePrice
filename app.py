@@ -44,6 +44,13 @@ def predict():
     price = int(price)  # Convert to integer for display
     return render_template('result.html', price=price)
 
+@app.route('/predict_api', methods=['POST'])
+def predict_api():
+    data = request.get_json(force=True)
+    df = pd.DataFrame([data])
+    prediction = model.predict(df)[0]
+    return jsonify({"prediction": int(prediction**2)})
+
 if __name__ == "__main__":
     app.run(debug=True)
 

@@ -23,4 +23,13 @@ numpy
 matplotlib
 
 present in requirements.txt
+
 pip install -r requirements.txt  //that will install  required pakcages
+
+# WebApp tool
+Flask
+ninja
+pickle
+html
+### Api 
+for 
